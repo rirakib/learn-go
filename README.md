@@ -22,6 +22,7 @@ Below is the list of topics covered in this repository. Click on any topic to vi
 | 10 | [Maps](./10_maps/README.md) | [10_maps](./10_maps) | Standard key-value associative arrays, deletion, clearing, and existence checks. |
 | 11 | [Range](./11_range/README.md) | [11_range](./11_range) | Iterating over slices, maps, strings, and channels using value copying and Go 1.22 scoping. |
 | 12 | [Functions](./12_functions/README.md) | [12_functions](./12_functions) | Functions as first-class citizens, Strategy pattern, and dynamic map registry. |
+| 13 | [Variadic Functions](./13_variadic_function/README.md) | [13_variadic_function](./13_variadic_function) | Declaring and calling functions with a variable number of parameters, and slice unpacking. |
 
 ---
 
