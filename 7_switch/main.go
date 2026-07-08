@@ -1,6 +1,22 @@
 package main 
 
 import "fmt"
+import "time"
+
+
+func workingDay(day string) string {
+
+	fmt.Println(day)
+
+	switch day {
+	case "Saturday", "Sunday":
+		fmt.Println("It's a weekend.")
+	default:
+		fmt.Println("It's a working day.")
+		return "working day"
+	}
+	return "weekend"
+}
 
 func main() {
 
@@ -20,5 +36,9 @@ func main() {
 	default:
 		fmt.Println("Grade: F")
 	}
+
+
+	var day string = time.Now().Weekday().String() 
+	workingDay(day)
 
 }
