@@ -1,60 +1,106 @@
-# Simple Values in Go
+# Simple Values and Basic Types in Go
 
-This directory covers basic data types and simple values in Go. It demonstrates printing integers, floats, strings, booleans, and basic operations.
-
-## Code Explanation
-
-```go
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println(1+3)
-
-	fmt.Println("this is string value")
-
-	fmt.Println(true)
-
-	fmt.Println(1.5)
-
-	fmt.Println(7/3.12)
-}
-```
-
-### Breakdown of the Code:
-
-1. **`fmt.Println(1+3)`**
-   - Performs basic addition of two integers (`1` and `3`) and prints the result: `4`.
-
-2. **`fmt.Println("this is string value")`**
-   - Prints a basic string literal. In Go, string literals are enclosed in double quotes `"`.
-
-3. **`fmt.Println(true)`**
-   - Prints a boolean value (`true`). Booleans represent logical values and can be either `true` or `false`.
-
-4. **`fmt.Println(1.5)`**
-   - Prints a floating-point number (decimal value).
-
-5. **`fmt.Println(7/3.12)`**
-   - Performs division between an integer (`7`) and a floating-point number (`3.12`). Since one of the operands is a float, the compiler performs floating-point division and prints the result (approx. `2.243589`).
+Go is a statically typed language, which means every value has a specific type determined at compile time. This directory introduces Go's primary, built-in "simple" data types that form the building blocks of any program.
 
 ---
 
-## Key Learning Takeaways
+## 1. Integers (Signed and Unsigned)
 
-* **Data Types**: Go has standard built-in types such as:
-  - **Integers**: Whole numbers (e.g., `1`, `3`).
-  - **Floats**: Decimal numbers (e.g., `1.5`, `3.12`).
-  - **Strings**: Text values (e.g., `"this is string value"`).
-  - **Booleans**: True/false values (e.g., `true`).
-* **Implicit Conversion**: When operating on mixed types like integers and floats (e.g., `7 / 3.12`), Go converts/promotes types to perform the operation. However, Go is strictly typed, and operations on completely incompatible types will result in a compile error.
+Integers are whole numbers. Go divides integers into signed (positive, negative, and zero) and unsigned (positive and zero only) types, and provides various sizes depending on the memory required.
+
+### Signed Integers (Can be positive, negative, or zero)
+
+| Type | Size | Range | Common Use Case |
+| :--- | :--- | :--- | :--- |
+| **`int8`** | 1 byte (8 bits) | `-128` to `127` | Tiny counters, low-memory buffers. |
+| **`int16`** | 2 bytes (16 bits) | `-32,768` to `32,767` | Medium-small numbers. |
+| **`int32`** | 4 bytes (32 bits) | `-2,147,483,648` to `2,147,483,647` | Large counts, games, general 32-bit arithmetic. |
+| **`int64`** | 8 bytes (64 bits) | `-9,223,372,036,854,775,808` to `9,223,372,036,854,775,807` | Unix timestamps, massive numbers, database IDs. |
+| **`int`** | Platform-dependent | 32-bit or 64-bit | **Default choice** for standard whole numbers. |
+
+### Unsigned Integers (Positive numbers and zero only)
+
+| Type | Size | Range | Common Use Case |
+| :--- | :--- | :--- | :--- |
+| **`uint8`** | 1 byte (8 bits) | `0` to `255` | Storing pixel colors (RGB), raw binary data. |
+| **`uint16`** | 2 bytes (16 bits) | `0` to `65,535` | Network port numbers (e.g., `8080`). |
+| **`uint32`** | 4 bytes (32 bits) | `0` to `4,294,967,295` | IP addresses, hashing algorithms. |
+| **`uint64`** | 8 bytes (64 bits) | `0` to `18,446,744,073,709,551,615` | Large unsigned values, cryptography. |
+| **`uint`** | Platform-dependent | 32-bit or 64-bit | Machine-word sized counts. |
+| **`uintptr`** | Platform-dependent | Fits a memory pointer | Low-level pointer arithmetic and C-language bindings. |
+
+> [!NOTE]
+> `int` and `uint` are distinct types from `int32` / `int64` even if they have the same size on your machine. You cannot perform operations between them without explicit casting (e.g., `int64(myInt)`).
 
 ---
 
-## How to Run
+## 2. Floating-Point Numbers
 
-To run this example, navigate to this directory in your terminal and execute:
+Floats represent numbers that contain decimal points or fractions. Go supports two precision formats based on the IEEE-754 standard:
+
+| Type | Size | Precision (Significant Digits) | Common Use Case |
+| :--- | :--- | :--- | :--- |
+| **`float32`** | 4 bytes (32 bits) | `~7 decimal digits` | Graphics buffers (OpenGL/Vulkan), machine learning vectors where memory usage is critical. |
+| **`float64`** | 8 bytes (64 bits) | `~15 decimal digits` | **Default choice** for calculations, scientific computing, financial decimals (though floats should generally be avoided for exact money values). |
+
+### Key Differences: `float32` vs `float64`
+* **Precision**: `float64` is significantly more precise than `float32`. Calculations using `float32` accumulate rounding errors much faster.
+* **Compatibility**: Go's math package functions (like `math.Sqrt`, `math.Sin`, etc.) accept and return `float64`. Working with `float32` requires constant type casting.
+* **Performance**: Modern 64-bit CPUs handle `float64` calculations just as fast as `float32`.
+
+---
+
+## 3. Complex Numbers
+
+For advanced mathematics (e.g., engineering, physics, signal processing), Go natively supports complex numbers consisting of a real and an imaginary part:
+
+* **`complex64`**: Real and imaginary parts are both `float32` values.
+* **`complex128`**: Real and imaginary parts are both `float64` values (this is the **default** when using built-in functions like `complex(real, imag)`).
+
+---
+
+## 4. Strings (`string`)
+
+A string is an immutable sequence of characters, commonly used to represent text (e.g., `"Hello, Go!"`).
+* **Double Quotes (`"..."`)**: Standard string literals. Supports escape sequences like `\n` (newline) and `\t` (tab).
+* **Backticks (`` `...` ``)**: Raw string literals. They do not interpret escape sequences and can span multiple lines.
+* **UTF-8 Encoding**: Go strings natively support characters from any language, emojis, and symbols because they are UTF-8 encoded by default.
+
+---
+
+## 5. Booleans (`bool`)
+
+Booleans represent logical truth values and can only have one of two states:
+* **`true`**
+* **`false`**
+They are primarily used in conditional statements (`if`/`else`) and loops.
+
+---
+
+## 6. Specialized Type Aliases
+
+Go has two special aliases for integer types that are widely used when dealing with characters and text:
+
+* **`byte`**: An alias for `uint8`. Represents raw binary data or a single ASCII character.
+* **`rune`**: An alias for `int32`. A rune represents a single Unicode character or code point (e.g., `'A'`, `'ই'`, `'😊'`). Runes are enclosed in **single quotes**.
+
+---
+
+## Default "Zero Values"
+
+In Go, variables declared without an initial value are automatically assigned their **zero value**:
+
+| Type Group | Zero Value |
+|------------|------------|
+| Numeric (`int`, `float`, `complex`) | `0` / `0.0` / `(0+0i)` |
+| Booleans (`bool`) | `false` |
+| Strings (`string`) | `""` (empty string) |
+
+---
+
+## How to Run the Code in this Directory
+
+To execute the example program demonstrating these simple values, run:
 
 ```bash
 go run main.go

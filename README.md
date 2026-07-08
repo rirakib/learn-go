@@ -10,16 +10,16 @@ Below is the list of topics covered in this repository. Click on any topic to vi
 
 | # | Topic | Folder | Description |
 |---|-------|--------|-------------|
-| 1 | **Hello World** | [1_hello_world](file:///c:/Users/rirra/Downloads/learn-go/1_hello_world/README.md) | The entry point of Go programs, basic syntax, and printing. |
-| 2 | **Simple Values** | [2_simple_values](file:///c:/Users/rirra/Downloads/learn-go/2_simple_values/README.md) | Standard types like integers, strings, booleans, and floats. |
-| 3 | **Variables** | [3_variables](file:///c:/Users/rirra/Downloads/learn-go/3_variables/README.md) | Standard variable declaration with `var` and short declaration (`:=`). |
-| 4 | **Constants & Functions** | [4_constant](file:///c:/Users/rirra/Downloads/learn-go/4_constant/README.md) | Defining immutable constants and building helper functions. |
-| 5 | **Loops** | [5_for](file:///c:/Users/rirra/Downloads/learn-go/5_for/README.md) | Go's `for` loop structures, including `break` and `continue`. |
-| 6 | **Conditionals** | [6_if_else](file:///c:/Users/rirra/Downloads/learn-go/6_if_else/README.md) | Branching logical decisions using `if`, `else if`, and `else`. |
-| 7 | **Switch Statements** | [7_switch](file:///c:/Users/rirra/Downloads/learn-go/7_switch/README.md) | Multi-way conditionals, expressionless switches, and comma-ok matching. |
-| 8 | **Arrays** | [8_arrays](file:///c:/Users/rirra/Downloads/learn-go/8_arrays/README.md) | Working with fixed-size sequences, nested matrices, and interface arrays. |
-| 9 | **Slices** | [9_slices](file:///c:/Users/rirra/Downloads/learn-go/9_slices/README.md) | Dynamic wrappers around arrays, growth mechanics, copying, and comparing. |
-| 10 | **Maps** | [10_maps](file:///c:/Users/rirra/Downloads/learn-go/10_maps/README.md) | Standard key-value associative arrays, deletion, clearing, and existence checks. |
+| 1 | [Hello World](./1_hello_world/README.md) | [1_hello_world](./1_hello_world) | The entry point of Go programs, basic syntax, and printing. |
+| 2 | [Simple Values](./2_simple_values/README.md) | [2_simple_values](./2_simple_values) | Standard types like integers, strings, booleans, and floats. |
+| 3 | [Variables](./3_variables/README.md) | [3_variables](./3_variables) | Standard variable declaration with `var` and short declaration (`:=`). |
+| 4 | [Constants & Functions](./4_constant/README.md) | [4_constant](./4_constant) | Defining immutable constants and building helper functions. |
+| 5 | [Loops](./5_for/README.md) | [5_for](./5_for) | Go's `for` loop structures, including `break` and `continue`. |
+| 6 | [Conditionals](./6_if_else/README.md) | [6_if_else](./6_if_else) | Branching logical decisions using `if`, `else if`, and `else`. |
+| 7 | [Switch Statements](./7_switch/README.md) | [7_switch](./7_switch) | Multi-way conditionals, expressionless switches, and comma-ok matching. |
+| 8 | [Arrays](./8_arrays/README.md) | [8_arrays](./8_arrays) | Working with fixed-size sequences, nested matrices, and interface arrays. |
+| 9 | [Slices](./9_slices/README.md) | [9_slices](./9_slices) | Dynamic wrappers around arrays, growth mechanics, copying, and comparing. |
+| 10 | [Maps](./10_maps/README.md) | [10_maps](./10_maps) | Standard key-value associative arrays, deletion, clearing, and existence checks. |
 
 ---
 
