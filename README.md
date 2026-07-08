@@ -20,6 +20,7 @@ Below is the list of topics covered in this repository. Click on any topic to vi
 | 8 | [Arrays](./8_arrays/README.md) | [8_arrays](./8_arrays) | Working with fixed-size sequences, nested matrices, and interface arrays. |
 | 9 | [Slices](./9_slices/README.md) | [9_slices](./9_slices) | Dynamic wrappers around arrays, growth mechanics, copying, and comparing. |
 | 10 | [Maps](./10_maps/README.md) | [10_maps](./10_maps) | Standard key-value associative arrays, deletion, clearing, and existence checks. |
+| 11 | [Range](./11_range/README.md) | [11_range](./11_range) | Iterating over slices, maps, strings, and channels using value copying and Go 1.22 scoping. |
 
 ---
 
