@@ -1,0 +1,253 @@
+# Employee Management System
+
+## Objective
+
+Build a Command Line Employee Management System using Go.
+
+Store all employee data in memory using a slice.
+
+Do not use any database.
+
+---
+
+## Employee Structure
+
+Employee contains the following fields:
+
+* ID
+* Name
+* Department
+* Position
+* Salary
+* Age
+* IsActive
+
+---
+
+## Main Menu
+
+1. Add Employee
+2. Update Employee
+3. Delete Employee
+4. Find Employee By ID
+5. Search Employee By Name
+6. List All Employees
+7. List Employees By Department
+8. Increase Salary
+9. Toggle Employee Status
+10. Show Statistics
+11. Exit
+
+---
+
+## 1. Add Employee
+
+Input:
+
+* Employee ID
+* Name
+* Department
+* Position
+* Salary
+* Age
+
+Validation:
+
+* Employee ID cannot be empty.
+* Name cannot be empty.
+* Department cannot be empty.
+* Position cannot be empty.
+* Salary must be greater than 0.
+* Age must be between 18 and 65.
+* Duplicate Employee ID is not allowed.
+
+Default Value:
+
+* IsActive = true
+
+---
+
+## 2. Update Employee
+
+Update an existing employee by Employee ID.
+
+Editable fields:
+
+* Name
+* Department
+* Position
+* Salary
+* Age
+
+Employee ID cannot be changed.
+
+If the employee is not found, display an appropriate message.
+
+---
+
+## 3. Delete Employee
+
+Delete an employee by Employee ID.
+
+If the employee exists, remove it from the employee list.
+
+If the employee is not found, display an appropriate message.
+
+---
+
+## 4. Find Employee By ID
+
+Search an employee using Employee ID.
+
+Display all employee information.
+
+If not found, display an appropriate message.
+
+---
+
+## 5. Search Employee By Name
+
+Search employees by name.
+
+Requirements:
+
+* Partial search.
+* Case-insensitive search.
+* Display all matched employees.
+
+Example:
+
+Searching for:
+
+ra
+
+Should match:
+
+* Rakib
+* Rashed
+* Arman
+
+---
+
+## 6. List All Employees
+
+Display all employees in a formatted table.
+
+If no employee exists, display:
+
+No employee found.
+
+---
+
+## 7. List Employees By Department
+
+Input:
+
+Department Name
+
+Requirements:
+
+* Case-insensitive search.
+* Display all employees belonging to the selected department.
+
+If no employee is found, display an appropriate message.
+
+---
+
+## 8. Increase Salary
+
+Input:
+
+* Employee ID
+* Increase Amount
+
+Validation:
+
+* Employee must exist.
+* Increase Amount must be greater than zero.
+
+Display:
+
+* Current Salary
+* Increase Amount
+* Updated Salary
+
+---
+
+## 9. Toggle Employee Status
+
+Toggle employee status.
+
+If Active:
+
+Change to Inactive.
+
+If Inactive:
+
+Change to Active.
+
+Display the updated status.
+
+---
+
+## 10. Show Statistics
+
+Display:
+
+* Total Employees
+* Total Active Employees
+* Total Inactive Employees
+* Average Salary
+* Highest Salary
+* Lowest Salary
+* Average Age
+
+---
+
+## Programming Rules
+
+* Use struct.
+* Store employees using []*Employee.
+* Use functions for every operation.
+* Keep functions small and focused.
+* Avoid duplicate code.
+* Use switch for menu handling.
+* Use bufio.NewReader() for input.
+* Use strconv for numeric conversion.
+* Use strings.TrimSpace() for string validation.
+* Use strings.EqualFold() for case-insensitive comparison.
+* Use strings.Contains() for partial search.
+* Validate every user input before processing.
+
+---
+
+## Bonus Features
+
+* Sort Employees by Name
+* Sort Employees by Salary (Ascending)
+* Sort Employees by Salary (Descending)
+* Sort Employees by Age
+* Show Highest Paid Employee
+* Show Lowest Paid Employee
+* Export Employees to CSV
+* Import Employees from CSV
+* Pagination (5 records per page)
+* Delete Confirmation (Y/N)
+
+---
+
+## Goal
+
+The project should demonstrate understanding of:
+
+* Struct
+* Slice
+* Pointer
+* Functions
+* Loops
+* Switch
+* Validation
+* Searching
+* Aggregation
+* Clean Code
+* Error Handling

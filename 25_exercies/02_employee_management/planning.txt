@@ -1,0 +1,3 @@
+//prothome features show korabo
+// then readline theke data nibo
+// switch case a niye jabe, okhane theke function use korabo
