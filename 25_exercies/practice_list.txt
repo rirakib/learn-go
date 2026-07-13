@@ -1,0 +1,11 @@
+exercises/
+├── 01_student_report
+├── 02_employee_management
+├── 03_inventory
+├── 04_bank_account
+├── 05_library
+├── 06_payment_gateway
+├── 07_notification
+├── 08_generic_filter
+├── 09_fake_api
+└── 10_task_scheduler

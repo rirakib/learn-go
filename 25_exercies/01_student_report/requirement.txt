@@ -1,0 +1,188 @@
+# Exercise 01 - Student Report Management System
+
+## Objective
+
+Build a simple Student Report Management System using Go. The project should store all data in memory (no database, no file storage) and focus on writing clean, modular, and maintainable code.
+
+---
+
+# Rules
+
+* Store all students in memory.
+* Do not use any database.
+* Do not use JSON or file storage.
+* Keep each function responsible for only one task.
+* Organize the project into multiple files if necessary.
+* Write clean and readable code.
+
+---
+
+# Student Model
+
+Design a `Student` struct with the required fields.
+
+Suggested fields:
+
+* ID
+* Name
+* Department
+* Age
+* Marks (choose the most suitable data type)
+
+You may add additional fields if needed.
+
+---
+
+# Functional Requirements
+
+## 1. Add Student
+
+Create a function to add a new student to the system.
+
+---
+
+## 2. Get All Students
+
+Return all students currently stored in memory.
+
+---
+
+## 3. Find Student by ID
+
+Search and return a student using their unique ID.
+
+---
+
+## 4. Update Student
+
+Update an existing student's information.
+
+---
+
+## 5. Delete Student
+
+Delete a student using their ID.
+
+---
+
+## 6. Search Students
+
+Search students by name.
+
+Examples:
+
+* "rak"
+* "rah"
+
+The search should return all matching students.
+
+---
+
+# Reports
+
+## 7. Average Marks
+
+Calculate the average marks for each student.
+
+---
+
+## 8. Top Student
+
+Find and return the student with the highest average marks.
+
+---
+
+## 9. Failed Students
+
+Return all students whose average marks are below the passing mark.
+
+Choose the passing mark yourself.
+
+---
+
+## 10. Department-wise Students
+
+Group students by department.
+
+Example:
+
+CSE
+
+* Rakib
+* Karim
+
+EEE
+
+* Rahim
+* Hasan
+
+---
+
+## 11. Department Statistics
+
+Display the total number of students in each department.
+
+Example:
+
+* CSE : 10
+* EEE : 7
+* BBA : 5
+
+---
+
+## 12. Student Report
+
+Generate a detailed report for a single student.
+
+Example information:
+
+* Student ID
+* Name
+* Department
+* Age
+* Marks
+* Average Marks
+* Pass/Fail Status
+
+---
+
+# Project Structure
+
+Since packages have not been learned yet, implement the entire exercise in a single `main.go` file.
+
+Example:
+
+* main.go
+
+You may organize it differently if you believe it improves readability.
+
+---
+
+# Constraints
+
+* Use Structs.
+* Use Functions.
+* Use Slices.
+* Use Maps where appropriate.
+* Keep functions small and reusable.
+* Avoid unnecessary global variables.
+* Do not use Channels.
+* Do not use external packages.
+
+---
+
+# Expected Learning Outcomes
+
+After completing this exercise, you should be comfortable with:
+
+* Structs
+* Methods
+* Slices
+* Maps
+* Functions
+* CRUD operations
+* Basic data processing
+* Searching
+* Grouping data
+* Report generation
+* Writing clean and organized Go code

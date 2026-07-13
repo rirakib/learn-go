@@ -17,7 +17,7 @@ func (o order) newOrder(orderId int, customerName string, amount float64, status
 
 	order := order{
 		orderId:      orderId,
-		customerName: customerName,
+		customerName: customerName,	
 		amount:       amount,
 		status:       status,
 		createdAt:    time.Now(),
